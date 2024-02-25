@@ -1,0 +1,37 @@
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  .navbar-brand {
+    position: relative;
+    z-index: 10;
+    background-color: hsl(0, 0%, 100%);
+
+    .navbar-burger {
+      margin-left: unset;
+      height: unset;
+    }
+  }
+}
+
+.title {
+  font-family: var(--font-just-another-hand);
+  color: var(--primary-color) !important;
+  font-weight: normal;
+
+  &.is-active {
+    color: var(--active-color) !important;
+  }
+}
+
+.card {
+  color: unset;
+  display: block;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+      0 0px 0 1px rgba(10, 10, 10, 0.02);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+}

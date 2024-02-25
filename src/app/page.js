@@ -1,10 +1,11 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+
+import bannerImg from "@/assets/images/doodle/doodle-1.png";
 
 export default function Home() {
   return (
-    <main>
-      ABC
-    </main>
+    <>
+      <Image src={bannerImg} width={1500} height={700} />
+    </>
   );
 }

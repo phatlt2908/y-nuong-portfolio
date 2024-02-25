@@ -1,18 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-
 import "../assets/styles/globals.scss";
+
+import MainNavigation from "@/components/main-navigation";
+import MainSideBar from "@/components/main-side-bar";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
-
-import avatarImg from "@/assets/images/y-nuong-avatar.jpeg";
-import avatarNameImg from "@/assets/images/y-nuong-avatar-name.png";
 
 import { just_another_hand, just_another_hand_down_here } from "./fonts";
 
@@ -27,143 +20,20 @@ export default function RootLayout({ children }) {
       <body
         className={`${just_another_hand.variable} ${just_another_hand_down_here.variable}`}
       >
-        <nav className="nav has-shadow">
-          <div className="container">
-            <div className="nav-left">
-              <a className="nav-item">Website</a>
-            </div>
-            <label htmlFor="menu-toggle" className="nav-toggle">
-              <span></span>
-              <span></span>
-              <span></span>
-            </label>
-            <input type="checkbox" id="menu-toggle" className="is-hidden" />
-            <div className="nav-right nav-menu">
-              <a className="nav-item is-tab is-hidden-tablet">
-                <span className="icon">
-                  <i className="fa fa-home"></i>
-                </span>{" "}
-                Home
-              </a>
-              <a className="nav-item is-tab is-hidden-tablet">
-                <span className="icon">
-                  <i className="fa fa-table"></i>
-                </span>{" "}
-                Links
-              </a>
-              <a className="nav-item is-tab is-hidden-tablet">
-                <span className="icon">
-                  <i className="fa fa-info"></i>
-                </span>{" "}
-                About
-              </a>
-
-              <a className="nav-item is-tab is-active">
-                <span className="icon">
-                  <i className="fa fa-user"></i>
-                </span>
-              </a>
-              <a className="nav-item is-tab">
-                <span className="icon">
-                  <i className="fa fa-sign-out"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-        </nav>
+        <MainNavigation />
 
         <section className="main-content columns">
-          <div className="container column">
+          <div className="column">
             <div className="section">{children}</div>
           </div>
 
-          <aside className="side-bar column section is-narrow is-hidden-mobile">
-            <div className="side-bar__infor">
-              <div className="is-flex py-6">
-                <div className="image is-48x48">
-                  <Image
-                    className="is-rounded is-align-self-center"
-                    src={avatarImg}
-                    width={50}
-                    height={50}
-                  />
-                </div>
-                <div className="image is-align-self-center ml-4">
-                  <Image src={avatarNameImg} width={50} height={50} />
-                </div>
-              </div>
-            </div>
-
-            <ul className="side-bar__menu">
-              <li>
-                <Link
-                  href="#"
-                  className="title is-4 is-uppercase has-text-weight-normal is-active"
-                >
-                  HOME
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="title is-4 is-uppercase has-text-weight-normal"
-                >
-                  CATEGORIES
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="title is-4 is-uppercase has-text-weight-normal"
-                >
-                  ABOUT
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="title is-4 is-uppercase has-text-weight-normal"
-                >
-                  CONTACT
-                </Link>
-              </li>
-            </ul>
-
-            <div className="side-bar__contact">
-              <a
-                href="https://www.facebook.com/yinxco"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span className="icon">
-                  <FontAwesomeIcon icon={faFacebook} size="xl" />
-                </span>
-              </a>
-              <a
-                href="https://www.instagram.com/yinx_co"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span className="icon ml-2">
-                  <FontAwesomeIcon icon={faInstagram} size="xl" />
-                </span>
-              </a>
-              <a href="mailto:ynuong742@gmail.com">
-                <span className="icon ml-2">
-                  <FontAwesomeIcon icon={faEnvelope} size="xl" />
-                </span>
-              </a>
-            </div>
-          </aside>
-        </section>
-
-        <footer className="footer is-hidden">
-          <div className="container">
-            <div className="content has-text-centered">
-              <p>Hello</p>
-            </div>
+          <div
+            className="is-hidden-touch column is-narrow"
+            style={{ width: "300px" }}
+          >
+            <MainSideBar />
           </div>
-        </footer>
+        </section>
       </body>
     </html>
   );
