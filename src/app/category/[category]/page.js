@@ -1,4 +1,7 @@
 import { categories } from "@/constant";
+import styles from "./page.module.scss";
+
+import ImageBox from "@/components/image-box";
 
 export async function generateStaticParams() {
   return categories.map((category) => ({
@@ -7,11 +10,22 @@ export async function generateStaticParams() {
 }
 
 export default function CategoryDetail({ params }) {
-  const category = params.category;
+  const categoryCode = params.category;
+  const category = categories.find((item) => item.code === categoryCode);
+
+  console.log("category", category);
 
   return (
     <>
-      <h1>{category}</h1>
+      <h1>{categoryCode}</h1>
+      <div className={styles.category}>
+        <div className={styles.imageList}>
+          {category.imgs.map((img, index) => {
+            return <ImageBox key={index} image={img} />;
+            category.imgs;
+          })}
+        </div>
+      </div>
     </>
   );
 }
