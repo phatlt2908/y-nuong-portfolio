@@ -5,9 +5,9 @@ import Image from "next/image";
 import styles from "./image-box.module.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {} from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-function ImageBox({ image }) {
+function ImageBox({ imageId }) {
   const [isFullImage, setBoxClass] = useState(false);
 
   const onClickImg = () => {
@@ -19,27 +19,25 @@ function ImageBox({ image }) {
       className={`${styles.imageBoxContainer} ${isFullImage ? "full" : ""}`}
       onClick={onClickImg}
     >
-      <div className={styles.content}>
-        <Image
-          width={300}
-          height={300}
-          src={image}
-          alt="porforlio thumbnail"
-          referrerPolicy="no-referrer"
-        />
-      </div>
+      <Image
+        width={1000}
+        height={1000}
+        src={"https://drive.google.com/thumbnail?id=" + imageId + "&sz=w600"}
+        alt="porforlio thumbnail"
+        referrerPolicy="no-referrer"
+      />
 
       {isFullImage && (
         <div className={styles.full}>
           <div className={styles.fullImage}>
             <div className={styles.closeBtn}>
-              <FontAwesomeIcon className="fa-lg" icon={faHouse} />
+              <FontAwesomeIcon className="fa-lg" icon={faXmark} />
             </div>
             <Image
-              width={1000}
-              height={1000}
+              width={2000}
+              height={2000}
               className="grid-item"
-              src={image}
+              src={"https://drive.google.com/thumbnail?id=" + imageId + "&sz=w1200"}
               alt="porforlio full"
               referrerPolicy="no-referrer"
             />

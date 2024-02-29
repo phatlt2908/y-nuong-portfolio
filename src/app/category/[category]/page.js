@@ -13,15 +13,13 @@ export default function CategoryDetail({ params }) {
   const categoryCode = params.category;
   const category = categories.find((item) => item.code === categoryCode);
 
-  console.log("category", category);
-
   return (
     <>
-      <h1>{categoryCode}</h1>
+      <h1 className="title is-1 has-text-centered">{category.name}</h1>
       <div className={styles.category}>
         <div className={styles.imageList}>
           {category.imgs.map((img, index) => {
-            return <ImageBox key={index} image={img} />;
+            return <ImageBox key={index} imageId={img} />;
             category.imgs;
           })}
         </div>
