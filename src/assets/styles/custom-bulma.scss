@@ -13,9 +13,9 @@
   }
 }
 
-.title {
+.title, .subtitle {
   font-family: var(--font-just-another-hand);
-  color: var(--secondary-color) !important;
+  color: var(--secondary-color);
   font-weight: normal;
 
   &.is-active {
@@ -23,15 +23,21 @@
   }
 }
 
-.card {
-  color: unset;
-  display: block;
-  box-shadow: none;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
+.color-strength {
+  color: var(--active-color);
+}
 
-  &:hover {
-    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
-      0 0px 0 1px rgba(10, 10, 10, 0.02);
+#category-list {
+  .card {
+    color: unset;
+    display: block;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+        0 0px 0 1px rgba(10, 10, 10, 0.02);
+    }
   }
 }

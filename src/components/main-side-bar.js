@@ -51,7 +51,7 @@ function MainSideBar() {
             href="/category"
             className={
               "title is-4 is-uppercase has-text-weight-normal " +
-              (pathname == "/category" ? "is-active" : "")
+              (pathname.startsWith("/category") ? "is-active" : "")
             }
           >
             CATEGORIES

@@ -31,13 +31,13 @@ function MainNavigation() {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <a className="navbar-item" href="https://bulma.io">
+        <Link className="navbar-item" href="/">
           <Image src={logoImg} width={89} height={55} />
-        </a>
+        </Link>
         <div className="navbar-item mx-auto is-hidden-desktop">
-          <a className="navbar-item" href="#">
+          <Link className="navbar-item" href="/">
             <FontAwesomeIcon icon={faHouse} size="xl" />
-          </a>
+          </Link>
           <a className="navbar-item" href="#">
             <FontAwesomeIcon icon={faCommentDots} size="xl" />
           </a>
@@ -63,9 +63,9 @@ function MainNavigation() {
         {/* hidden on mobile */}
         <div className="navbar-start"></div>
         <div className="navbar-end">
-          <a className="navbar-item" href="#">
+          <Link className="navbar-item" href="/">
             <FontAwesomeIcon icon={faHouse} size="xl" />
-          </a>
+          </Link>
           <a className="navbar-item" href="#">
             <FontAwesomeIcon icon={faCommentDots} size="xl" />
           </a>

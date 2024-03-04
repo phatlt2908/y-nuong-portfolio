@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import styles from "./page.module.scss";
+
 import { categories } from "@/constant";
 
 export default function Category() {
   return (
-    <div className="columns is-multiline">
+    <div id="category-list" className="columns is-multiline">
       {categories.map((category, index) => (
         <div
           key={index}
@@ -15,10 +17,10 @@ export default function Category() {
             <div className="card-image">
               <figure className="image is-5by3">
                 <Image
-                  className="has-ratio"
+                  className={styles.bannerImage}
                   width={1000}
                   height={500}
-                  src={category.bannerImg}
+                  src={"https://drive.google.com/thumbnail?id=" + category.bannerImg + "&sz=w600"}
                   alt={category.name}
                 />
               </figure>
