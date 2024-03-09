@@ -8,10 +8,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 function ImageBox({ imageId }) {
-  const [isFullImage, setBoxClass] = useState(false);
+  const [isFullImage, setIsFullImage] = useState(false);
+  const [isFullImageLoaded, setIsFullImageLoaded] = useState(false);
 
   const onClickImg = () => {
-    setBoxClass(!isFullImage);
+    setIsFullImage(!isFullImage);
   };
 
   return (
@@ -34,10 +35,13 @@ function ImageBox({ imageId }) {
               <FontAwesomeIcon className="fa-lg" icon={faXmark} />
             </div>
             <Image
+              onLoad={() => setIsFullImageLoaded(true)}
               width={2000}
               height={2000}
-              className="grid-item"
-              src={"https://drive.google.com/thumbnail?id=" + imageId + "&sz=w1200"}
+              className={isFullImageLoaded ? "" : "is-hidden"}
+              src={
+                "https://drive.google.com/thumbnail?id=" + imageId + "&sz=w1200"
+              }
               alt="porforlio full"
               referrerPolicy="no-referrer"
             />

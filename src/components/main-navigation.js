@@ -32,7 +32,7 @@ function MainNavigation() {
     <nav className="navbar">
       <div className="navbar-brand">
         <Link className="navbar-item" href="/">
-          <Image src={logoImg} width={89} height={55} />
+          <Image src={logoImg} width={89} height={55} alt="logo" />
         </Link>
         <div className="navbar-item mx-auto is-hidden-desktop">
           <Link className="navbar-item" href="/">

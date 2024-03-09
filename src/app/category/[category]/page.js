@@ -20,7 +20,6 @@ export default function CategoryDetail({ params }) {
         <div className={styles.imageList}>
           {category.imgs.map((img, index) => {
             return <ImageBox key={index} imageId={img} />;
-            category.imgs;
           })}
         </div>
       </div>

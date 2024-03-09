@@ -26,10 +26,11 @@ function MainSideBar() {
               src={avatarImg}
               width={50}
               height={50}
+              alt="avatar"
             />
           </div>
           <div className="image is-align-self-center ml-4">
-            <Image src={avatarNameImg} width={100} height={50} />
+            <Image src={avatarNameImg} width={100} height={50} alt="avatarName" />
           </div>
         </div>
       </div>
