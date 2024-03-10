@@ -7,7 +7,9 @@ import styles from "./image-box.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-function ImageBox({ imageId }) {
+import { getRandomAnimationClass } from "@/constant";
+
+function ImageBox({ imageId, onImageLoaded }) {
   const [isFullImage, setIsFullImage] = useState(false);
 
   const onClickImg = () => {
@@ -16,7 +18,9 @@ function ImageBox({ imageId }) {
 
   return (
     <div
-      className={`${styles.imageBoxContainer} ${isFullImage ? "full" : ""}`}
+      className={`${getRandomAnimationClass()} ${styles.imageBoxContainer} ${
+        isFullImage ? "full" : ""
+      }`}
       onClick={onClickImg}
     >
       <Image
@@ -25,6 +29,9 @@ function ImageBox({ imageId }) {
         src={"https://drive.google.com/thumbnail?id=" + imageId + "&sz=w600"}
         alt="porforlio thumbnail"
         referrerPolicy="no-referrer"
+        onLoad={() => onImageLoaded()}
+        onError={() => onImageLoaded()}
+        priority={true}
       />
 
       {isFullImage && (

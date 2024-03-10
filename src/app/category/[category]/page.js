@@ -1,7 +1,6 @@
 import { categories } from "@/constant";
-import styles from "./page.module.scss";
 
-import ImageBox from "@/components/image-box";
+import ImageList from "@/components/image-list";
 
 export async function generateStaticParams() {
   return categories.map((category) => ({
@@ -16,13 +15,7 @@ export default function CategoryDetail({ params }) {
   return (
     <>
       <h1 className="title is-1 has-text-centered">{category.name}</h1>
-      <div className={styles.category}>
-        <div className={styles.imageList}>
-          {category.imgs.map((img, index) => {
-            return <ImageBox key={index} imageId={img} />;
-          })}
-        </div>
-      </div>
+      <ImageList imageList={category.imgs} />
     </>
   );
 }
