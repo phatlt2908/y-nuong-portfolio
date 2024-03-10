@@ -9,7 +9,6 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 function ImageBox({ imageId }) {
   const [isFullImage, setIsFullImage] = useState(false);
-  const [isFullImageLoaded, setIsFullImageLoaded] = useState(false);
 
   const onClickImg = () => {
     setIsFullImage(!isFullImage);
@@ -35,10 +34,8 @@ function ImageBox({ imageId }) {
               <FontAwesomeIcon className="fa-lg" icon={faXmark} />
             </div>
             <Image
-              onLoad={() => setIsFullImageLoaded(true)}
               width={2000}
               height={2000}
-              className={isFullImageLoaded ? "" : "is-hidden"}
               src={
                 "https://drive.google.com/thumbnail?id=" + imageId + "&sz=w1200"
               }
