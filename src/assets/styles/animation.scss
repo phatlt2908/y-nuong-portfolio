@@ -1,0 +1,73 @@
+.trans-bounce-in {
+  animation-name: bounceIn;
+  animation-duration: 0.5s;
+}
+
+@keyframes bounceIn {
+  0% {
+      opacity: 0;
+      transform: translateY(10%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+.trans-float-left {
+  animation-name: floatLeft;
+  animation-duration: 0.5s;
+}
+
+@keyframes floatLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-10%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0px);
+  }
+}
+
+.trans-float-infinite {
+  animation-name: floatInfinite;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes floatInfinite {
+  0% {
+      filter: drop-shadow(5px 10px 7px rgba(0, 0, 0, 0.6));
+      -webkit-filter: drop-shadow(5px 10px 7px rgba(0, 0, 0, 0.6));
+      transform: translatey(0px);
+  }
+  50% {
+      filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.2));
+      -webkit-filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.2));
+      transform: translatey(-10px);
+  }
+  100% {
+      filter: drop-shadow(5px 10px 7px rgba(0, 0, 0, 0.6));
+      -webkit-filter: drop-shadow(5px 10px 7px rgba(0, 0, 0, 0.6));
+      transform: translatey(0px);
+  }
+}
+
+.trans-zoom-infinite {
+  animation-name: zoomInfinite;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes zoomfinite {
+  0% {
+      width: 50px;
+  }
+  50% {
+      width: 100px;
+  }
+  100% {
+      width: 50px;
+  }
+}

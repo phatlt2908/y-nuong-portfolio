@@ -3,7 +3,11 @@
   margin: 0 auto;
 
   .imageList {
-      columns: 3 250px;
-      column-gap: 1.5rem;
+    columns: 3 250px;
+    column-gap: 1.5rem;
   }
+}
+
+.hidden {
+  display: none;
 }

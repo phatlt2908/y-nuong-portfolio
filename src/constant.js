@@ -33,7 +33,7 @@ const categories = [
       "19w37NQ2IJ73czhPvEH9I68rdSmmCuKgW",
       "1BSo0ig5d-dFMUdlgmOS0vyQ8_KcORwlY",
       "1ppZP1bsDBF3ta-nSMlo7nL7sWiSdkAS5",
-      "1bUHAqKGKgv2dRIGC8J4poF9mj6ef692b"
+      "1bUHAqKGKgv2dRIGC8J4poF9mj6ef692b",
     ],
   },
   {
@@ -57,7 +57,7 @@ const categories = [
       "1RoM1r94XSA5epXOk2aidE956uf3URA6x",
       "1SnXoeB2V7BHHRDw-YduVuupoyecD9gEk",
       "1avSrlZZYA5IDjxfQkxj_-T3UxCNLNw5p",
-      "1ZHDD_Qf04rRcgyvnpbfvJ4RTMIjcs1H9"
+      "1ZHDD_Qf04rRcgyvnpbfvJ4RTMIjcs1H9",
     ],
   },
   {
@@ -77,7 +77,7 @@ const categories = [
       "1LPJXIGJNSHD5rMjf2sM9Wh_OvQkk636i",
       "1bieKHzWMr4ThyHbjPQJUi-lcbX5bFuD7",
       "1MLO6jB_lyR5fTQgb1peILCOIH1NLfLFt",
-      "1ShBYPSE3Jr2e_mrABh08uoDVu04mxL5Z"
+      "1ShBYPSE3Jr2e_mrABh08uoDVu04mxL5Z",
     ],
   },
   {
@@ -99,7 +99,7 @@ const categories = [
       "1bCilXgwcCec5mm3j1_2mHSJ-CZDSVXbR",
       "1jFZ18zcgqdNP4HDYLZd0i32NJFnptuPC",
       "1RBcFUcrM-5oUYVeZGXYIKZkkb3N8grJo",
-      "1155ufM8Vh7fsPTlHBH-5Ca5-GeI1Daak"
+      "1155ufM8Vh7fsPTlHBH-5Ca5-GeI1Daak",
     ],
   },
   {
@@ -114,9 +114,15 @@ const categories = [
       "1gI5ZyJRm3Pm6zy2hVpssxwrfkvYYPYJs",
       "1T_aamsZNP_vgC30L9aBkqMBsMu-H5u1d",
       "1FOLzozT75bHBS4RFHD-OfmqkbNS4jl0R",
-      "1VLot1iTm5-CS3-PmeYj9RCmlRpPvlVMN"
+      "1VLot1iTm5-CS3-PmeYj9RCmlRpPvlVMN",
     ],
   },
 ];
 
-export { categories };
+const animationClass = ["trans-bounce-in", "trans-float-left"];
+
+const getRandomAnimationClass = () => {
+  return animationClass[Math.floor(Math.random() * animationClass.length)];
+}
+
+export { categories, getRandomAnimationClass };
