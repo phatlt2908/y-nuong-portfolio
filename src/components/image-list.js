@@ -8,20 +8,23 @@ import Loading from "@/components/loading";
 
 function ImageList({ imageList }) {
   const [numberOfLoaded, setNumberOfLoaded] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   const onImageLoaded = () => {
-     setTimeout(() => {
-       setNumberOfLoaded((prevNumberOfLoaded) => prevNumberOfLoaded + 1);
-     }, 2000);
-   };
+    setTimeout(() => {
+      setNumberOfLoaded((prevNumberOfLoaded) => prevNumberOfLoaded + 1);
+    }, 2000);
+  };
+
+  useEffect(() => {
+    if (numberOfLoaded >= imageList.length) {
+      setIsLoading(false);
+    }
+  }, [numberOfLoaded]);
 
   return (
     <>
-      <div
-        className={`${styles.category} ${
-          numberOfLoaded < imageList.length ? styles.hidden : ""
-        }`}
-      >
+      <div className={`${styles.category} ${isLoading ? styles.hidden : ""}`}>
         <div className={styles.imageList}>
           {imageList.map((img, index) => {
             return (
@@ -34,9 +37,7 @@ function ImageList({ imageList }) {
           })}
         </div>
       </div>
-      {numberOfLoaded < imageList.length && (
-        <Loading imageNum={imageList.length} />
-      )}
+      {isLoading && <Loading imageNum={imageList.length} />}
     </>
   );
 }

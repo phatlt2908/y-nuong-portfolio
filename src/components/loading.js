@@ -7,9 +7,10 @@ const randomHeight = () => {
 };
 
 function Loading({ imageNum }) {
+
   return (
     <div className={styles.category}>
-      <div className={styles.imageList}>
+      <div className={`${styles.imageList}`}>
         {new Array(imageNum).fill(0).map((_, index) => (
           <div
             key={index}
