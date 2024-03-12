@@ -17,7 +17,7 @@ function MainSideBar() {
   const pathname = usePathname();
 
   return (
-    <aside className={`${styles.sideBar} section`}>
+    <aside className={`${styles.sideBar} section trans-float-right-in`}>
       <div className={styles.infor}>
         <div className="is-flex py-6">
           <div className="image is-48x48">

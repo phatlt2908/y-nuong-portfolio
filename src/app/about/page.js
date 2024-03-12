@@ -5,17 +5,19 @@ import aboutImage1 from "@/assets/images/about/about-1.png";
 import aboutImage2 from "@/assets/images/about/about-2.png";
 import aboutImage3 from "@/assets/images/about/about-3.png";
 
+import { getRandomAnimationClass } from "@/constant";
+
 export default function About() {
   return (
     <div className={styles.about}>
       <div className="card section">
         <div className="columns is-vcentered">
-          <div className="column card-image">
+          <div className={`column card-image ${getRandomAnimationClass()}`}>
             <figure className="image is-square">
               <Image src={aboutImage1} width={800} height={800} alt="About" />
             </figure>
           </div>
-          <div className="column">
+          <div className={`column ${getRandomAnimationClass()}`}>
             <div className="content">
               <p className="title is-2">Hello, I’m Yin</p>
               <p className="subtitle is-4 color-strength">
@@ -24,8 +26,8 @@ export default function About() {
 
               <ul>
                 <li>
-                  I was born in 1999, currently living and working in Ho Chi Minh
-                  City.
+                  I was born in 1999, currently living and working in Ho Chi
+                  Minh City.
                   <br />I love drawing and designing, suitable for creating art
                   products.
                 </li>
@@ -42,7 +44,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="card section mt-6">
+      <div className={`card section mt-6 ${getRandomAnimationClass()}`}>
         <div className="columns">
           <div className="column">
             <div className="card-image">

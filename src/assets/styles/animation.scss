@@ -5,12 +5,13 @@
 
 @keyframes bounceIn {
   0% {
-      opacity: 0;
-      transform: translateY(10%);
+    opacity: 0;
+    transform: translateY(10%);
   }
+
   100% {
-      opacity: 1;
-      transform: translateY(0px);
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
@@ -21,12 +22,30 @@
 
 @keyframes floatLeft {
   0% {
-      opacity: 0;
-      transform: translateX(-10%);
+    opacity: 0;
+    transform: translateX(-10%);
   }
+
   100% {
-      opacity: 1;
-      transform: translateX(0px);
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.trans-float-right-in {
+  animation-name: floatRightIn;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+}
+@keyframes floatRightIn {
+  0% {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
 
@@ -38,19 +57,21 @@
 
 @keyframes floatInfinite {
   0% {
-      filter: drop-shadow(5px 10px 7px rgba(0, 0, 0, 0.6));
-      -webkit-filter: drop-shadow(5px 10px 7px rgba(0, 0, 0, 0.6));
-      transform: translatey(0px);
+    filter: drop-shadow(5px 10px 7px rgba(0, 0, 0, 0.6));
+    -webkit-filter: drop-shadow(5px 10px 7px rgba(0, 0, 0, 0.6));
+    transform: translatey(0px);
   }
+
   50% {
-      filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.2));
-      -webkit-filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.2));
-      transform: translatey(-10px);
+    filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.2));
+    -webkit-filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.2));
+    transform: translatey(-10px);
   }
+
   100% {
-      filter: drop-shadow(5px 10px 7px rgba(0, 0, 0, 0.6));
-      -webkit-filter: drop-shadow(5px 10px 7px rgba(0, 0, 0, 0.6));
-      transform: translatey(0px);
+    filter: drop-shadow(5px 10px 7px rgba(0, 0, 0, 0.6));
+    -webkit-filter: drop-shadow(5px 10px 7px rgba(0, 0, 0, 0.6));
+    transform: translatey(0px);
   }
 }
 
@@ -62,12 +83,14 @@
 
 @keyframes zoomfinite {
   0% {
-      width: 50px;
+    width: 50px;
   }
+
   50% {
-      width: 100px;
+    width: 100px;
   }
+
   100% {
-      width: 50px;
+    width: 50px;
   }
 }
