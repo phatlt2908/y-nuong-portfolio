@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname } from 'next/navigation'
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,12 +17,12 @@ import {
 import logoImg from "@/assets/images/common/y-nuong-logo.png";
 
 function MainNavigation() {
+  const pathname = usePathname();
   const [isActiveMobile, setIsActiveMobile] = useState(false);
-  const router = useRouter();
 
   useEffect(() => {
     setIsActiveMobile(false);
-  }, [router.query]);
+  }, [pathname]);
 
   const onBurger = () => {
     setIsActiveMobile(!isActiveMobile);

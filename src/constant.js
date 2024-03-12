@@ -123,7 +123,7 @@ const categories = [
   },
 ];
 
-const animationClass = ["trans-bounce-in", "trans-float-left"];
+const animationClass = ["trans-bounce-in", "trans-float-left", "trans-float-right-in"];
 
 const getRandomAnimationClass = () => {
   return animationClass[Math.floor(Math.random() * animationClass.length)];
