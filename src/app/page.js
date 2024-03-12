@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <Image
         className={styles.image}
-        src="https://drive.google.com/thumbnail?id=1hvp1cpCVM9dtxgGN_SPrSrZySzxkBB6d&sz=w1500"
+        src="https://drive.google.com/thumbnail?id=13G6PhsF1RgO0tiJbxEmRLHntQq7RrpsQ&sz=w1500"
         width={1500}
         height={700}
         alt="porforlio thumbnail"
