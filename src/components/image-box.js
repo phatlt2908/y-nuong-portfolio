@@ -24,6 +24,7 @@ function ImageBox({ imageId, onImageLoaded }) {
       onClick={onClickImg}
     >
       <Image
+        className={styles.thumnail}
         width={1000}
         height={1000}
         src={"https://drive.google.com/thumbnail?id=" + imageId + "&sz=w600"}
@@ -48,6 +49,10 @@ function ImageBox({ imageId, onImageLoaded }) {
               }
               alt="porforlio full"
               referrerPolicy="no-referrer"
+              placeholder="blur"
+              blurDataURL={
+                "https://drive.google.com/thumbnail?id=" + imageId + "&sz=10"
+              }
             />
           </div>
         </div>
