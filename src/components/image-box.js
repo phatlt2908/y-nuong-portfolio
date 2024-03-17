@@ -45,7 +45,7 @@ function ImageBox({ imageId, onImageLoaded }) {
               width={2000}
               height={2000}
               src={
-                "https://drive.google.com/thumbnail?id=" + imageId + "&sz=w1200"
+                "https://drive.google.com/thumbnail?id=" + imageId + "&sz=w2000"
               }
               alt="porforlio full"
               referrerPolicy="no-referrer"
