@@ -10,7 +10,7 @@ import { getRandomAnimationClass } from "@/constant";
 
 import portfolioApi from "@/service/portfolioApi";
 
-import Loading from "@/components/loading";
+import ImageLoading from "@/components/image-loading";
 
 export default function Category() {
   const [categoryList, setCategoryList] = useState([]);
@@ -52,7 +52,7 @@ export default function Category() {
                     height={500}
                     src={
                       "https://drive.google.com/thumbnail?id=" +
-                      category.bannerImageUrl +
+                      category.bannerImage +
                       "&sz=w600"
                     }
                     alt={category.name}
@@ -66,7 +66,7 @@ export default function Category() {
           </div>
         ))}
       </div>
-      {isLoading && <Loading imageNum={6} itemClass={"image is-5by3"} />}
+      {isLoading && <ImageLoading imageNum={6} itemClass={"image is-5by3"} />}
     </>
   );
 }

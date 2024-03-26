@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import styles from "./image-list.module.scss";
 
 import ImageBox from "@/components/image-box";
-import Loading from "@/components/loading";
+import ImageLoading from "@/components/image-loading";
 
 function ImageList({ imageList }) {
   const [numberOfLoaded, setNumberOfLoaded] = useState(0);
@@ -30,14 +30,14 @@ function ImageList({ imageList }) {
             return (
               <ImageBox
                 key={index}
-                imageId={img}
+                imageId={img.imageId}
                 onImageLoaded={onImageLoaded}
               />
             );
           })}
         </div>
       </div>
-      {isLoading && <Loading imageNum={imageList.length} />}
+      {isLoading && <ImageLoading imageNum={imageList.length} />}
     </>
   );
 }

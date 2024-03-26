@@ -9,11 +9,15 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import { getRandomAnimationClass } from "@/constant";
 
+import SpinnerLoading from "./spinner-loading";
+
 function ImageBox({ imageId, onImageLoaded }) {
   const [isFullImage, setIsFullImage] = useState(false);
+  const [isLoadingFullImage, setIsLoadingFullImage] = useState(true);
 
   const onClickImg = () => {
     setIsFullImage(!isFullImage);
+    setIsLoadingFullImage(true);
   };
 
   return (
@@ -41,6 +45,7 @@ function ImageBox({ imageId, onImageLoaded }) {
             <div className={styles.closeBtn}>
               <FontAwesomeIcon className="fa-lg" icon={faXmark} />
             </div>
+            {/* {isLoadingFullImage && <SpinnerLoading />} */}
             <Image
               width={2000}
               height={2000}
@@ -49,10 +54,9 @@ function ImageBox({ imageId, onImageLoaded }) {
               }
               alt="porforlio full"
               referrerPolicy="no-referrer"
-              placeholder="blur"
-              blurDataURL={
-                "https://drive.google.com/thumbnail?id=" + imageId + "&sz=10"
-              }
+              onLoad={() => setIsLoadingFullImage(false)}
+              onError={() => setIsLoadingFullImage(false)}
+              priority={true}
             />
           </div>
         </div>
