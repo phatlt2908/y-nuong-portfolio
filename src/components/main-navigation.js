@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -75,11 +75,7 @@ function MainNavigation() {
         </div>
       </div>
 
-      {isActiveMobile && (
-        <div className="is-hidden-desktop">
-          <MainSideBar />
-        </div>
-      )}
+      {isActiveMobile && <MainSideBar styleClass={"is-hidden-desktop"} />}
     </nav>
   );
 }
