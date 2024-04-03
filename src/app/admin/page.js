@@ -72,6 +72,7 @@ export default function Admin() {
             {imageList.map((img, index) => {
               return (
                 <Image
+                  key={index}
                   width={1000}
                   height={1000}
                   src={
