@@ -75,7 +75,7 @@ function MainNavigation() {
         </div>
       </div>
 
-      {isActiveMobile && <MainSideBar styleClass={"is-hidden-desktop"} />}
+      {isActiveMobile && <MainSideBar styleclassName={"is-hidden-desktop"} />}
     </nav>
   );
 }
