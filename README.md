@@ -40,4 +40,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Deploy by docker
 use "docker build -t y-nuong-nextjs ." to build image
-user "docker run -p 4200:3000 y-nuong-nextjs" to run container
+user "docker run -d -p 4200:3000 --name y-nuong-nextjs y-nuong-nextjs" to run container

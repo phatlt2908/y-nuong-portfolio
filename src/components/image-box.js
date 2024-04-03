@@ -45,7 +45,7 @@ function ImageBox({ imageId, onImageLoaded }) {
             <div className={styles.closeBtn}>
               <FontAwesomeIcon className="fa-lg" icon={faXmark} />
             </div>
-            {/* {isLoadingFullImage && <SpinnerLoading />} */}
+            {isLoadingFullImage && <SpinnerLoading />}
             <Image
               width={2000}
               height={2000}

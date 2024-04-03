@@ -66,7 +66,7 @@ export default function Category() {
           </div>
         ))}
       </div>
-      {isLoading && <ImageLoading imageNum={6} itemClass={"image is-5by3"} />}
+      {isLoading && <ImageLoading imageNum={6} itemclassName={"image is-5by3"} />}
     </>
   );
 }

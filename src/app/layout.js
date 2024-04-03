@@ -26,13 +26,7 @@ export default function RootLayout({ children }) {
           <div className="column">
             <div className="section">{children}</div>
           </div>
-
-          <div
-            className="is-hidden-touch column is-narrow"
-            style={{ width: "300px" }}
-          >
-            <MainSideBar />
-          </div>
+          <MainSideBar styleclassName={"is-hidden-touch column is-narrow"} />
         </section>
       </body>
     </html>
